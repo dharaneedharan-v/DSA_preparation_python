@@ -1,0 +1,10 @@
+def lowestCommonAncestor(root, p, q):
+    cur = root
+    while cur:
+        if p.val < cur.val and q.val < cur.val:
+            cur = cur.left
+        elif p.val > cur.val and q.val > cur.val:
+            cur = cur.right
+        else:
+            return cur
+    return None
